@@ -36,15 +36,6 @@
         .bar-fill { height: 100%; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); width: 0; }
         .aos-animate .bar-fill { width: var(--w); transition: 1.5s ease-out; }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            grid-gap: 12px;
-        }
-        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); aspect-ratio: 1/1; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; filter: brightness(0.8); }
-        .gallery-item:hover img { transform: scale(1.1); filter: brightness(1); }
-        
         #mobile-menu { transform: translateX(100%); transition: 0.4s ease; }
         #mobile-menu.active { transform: translateX(0); }
         
@@ -121,22 +112,22 @@
         <div class="max-w-6xl mx-auto">
             <h3 class="text-center text-[10px] font-black tracking-[1.2em] uppercase mb-12 text-white italic">Software Stack</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="glass-card p-8 text-center group transition duration-500" data-aos="fade-up">
+                <div class="glass-card p-8 text-center group transition duration-500">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" class="w-12 h-12 mx-auto mb-4 transition group-hover:scale-110">
                     <h4 class="text-[10px] font-black uppercase text-white tracking-widest">After Effects</h4>
                     <div class="bar-bg"><div class="bar-fill" style="--w: 95%;"></div></div>
                 </div>
-                <div class="glass-card p-8 text-center group transition duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="glass-card p-8 text-center group transition duration-500">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" class="w-12 h-12 mx-auto mb-4 transition group-hover:scale-110">
                     <h4 class="text-[10px] font-black uppercase text-white tracking-widest">Illustrator</h4>
                     <div class="bar-bg"><div class="bar-fill" style="--w: 92%;"></div></div>
                 </div>
-                <div class="glass-card p-8 text-center group transition duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="glass-card p-8 text-center group transition duration-500">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" class="w-12 h-12 mx-auto mb-4 transition group-hover:scale-110">
                     <h4 class="text-[10px] font-black uppercase text-white tracking-widest">Photoshop</h4>
                     <div class="bar-bg"><div class="bar-fill" style="--w: 88%;"></div></div>
                 </div>
-                <div class="glass-card p-8 text-center group transition duration-500" data-aos="fade-up" data-aos-delay="300">
+                <div class="glass-card p-8 text-center group transition duration-500">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" class="w-12 h-12 mx-auto mb-4 transition group-hover:scale-110">
                     <h4 class="text-[10px] font-black uppercase text-white tracking-widest">Premiere Pro</h4>
                     <div class="bar-bg"><div class="bar-fill" style="--w: 85%;"></div></div>
@@ -145,22 +136,23 @@
         </div>
     </section>
 
-    <section id="graphics" class="py-12 px-6 bg-black/60">
-        <div class="max-w-[1400px] mx-auto text-center">
-            <h3 class="text-[11px] font-black tracking-[1em] uppercase mb-12 text-cyan-400 italic">Graphics Collection</h3>
-            
-            <div class="gallery-grid mb-12">
-                <div class="gallery-item" data-aos="fade-up"><img src="PASTE_CLOUDINARY_URL_1" loading="lazy"></div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="PASTE_CLOUDINARY_URL_2" loading="lazy"></div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="PASTE_CLOUDINARY_URL_3" loading="lazy"></div>
-                <div class="gallery-item" data-aos="fade-up"><img src="PASTE_CLOUDINARY_URL_4" loading="lazy"></div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="PASTE_CLOUDINARY_URL_5" loading="lazy"></div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="PASTE_CLOUDINARY_URL_6" loading="lazy"></div>
-            </div>
-
-            <div class="py-10 glass-card max-w-2xl mx-auto">
-                <h4 class="text-sm font-bold uppercase tracking-widest mb-6">Explore 400+ Graphic Works</h4>
-                <a href="https://collection.cloudinary.com/dvg1ukdtz/62d859be9d459061504a99953d3a86a3" target="_blank" class="btn-cyan">Open Full Cloudinary Gallery</a>
+    <section id="graphics" class="py-24 px-6 bg-black/40 border-y border-white/5">
+        <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+            <h3 class="text-[11px] font-black tracking-[1em] uppercase mb-6 text-cyan-400 italic">Graphics Collection</h3>
+            <div class="glass-card p-12 md:p-20 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-cyan-500/10 blur-[80px]"></div>
+                
+                <h4 class="text-3xl md:text-5xl font-black uppercase italic mb-6">Visual Portfolio</h4>
+                <p class="text-zinc-400 text-xs tracking-widest uppercase mb-12 leading-relaxed opacity-70">
+                    Explore my extensive library of over 400+ high-quality graphic designs, 
+                    branding projects, and digital illustrations.
+                </p>
+                
+                <a href="https://collection.cloudinary.com/dvg1ukdtz/62d859be9d459061504a99953d3a86a3" target="_blank" class="btn-cyan scale-125 inline-block">
+                    Open Cloudinary Gallery
+                </a>
+                
+                <p class="mt-12 text-[8px] text-zinc-600 uppercase tracking-[0.5em]">Live Assets Hosted via Cloudinary</p>
             </div>
         </div>
     </section>
