@@ -36,13 +36,13 @@
         .bar-fill { height: 100%; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); width: 0; }
         .aos-animate .bar-fill { width: var(--w); transition: 1.5s ease-out; }
 
-        #mobile-menu { transform: translateX(100%); transition: 0.4s ease; }
-        #mobile-menu.active { transform: translateX(0); }
+        #mobile-menu { transform: translateX(100%); transition: 0.4s ease; visibility: hidden; }
+        #mobile-menu.active { transform: translateX(0); visibility: visible; }
         
         .btn-cyan {
             background: var(--cyan); color: #000; padding: 12px 30px; 
             font-weight: 900; text-transform: uppercase; letter-spacing: 2px; 
-            font-size: 10px; border-radius: 50px; transition: 0.3s;
+            font-size: 10px; border-radius: 50px; transition: 0.3s; display: inline-block;
         }
         .btn-cyan:hover { box-shadow: 0 0 20px var(--cyan); transform: scale(1.05); }
     </style>
@@ -69,6 +69,7 @@
         <a href="#about" class="mobile-link text-xl font-bold uppercase tracking-widest text-white">About</a>
         <a href="#showreel" class="mobile-link text-xl font-bold uppercase tracking-widest text-white">Showreel</a>
         <a href="#graphics" class="mobile-link text-xl font-bold uppercase tracking-widest text-white">Graphics</a>
+        <a href="#portfolio" class="mobile-link text-xl font-bold uppercase tracking-widest text-white">Motion</a>
         <a href="#contact" class="mobile-link text-xl font-bold tracking-widest uppercase text-white">Contact</a>
     </div>
 
@@ -97,7 +98,7 @@
                 <p class="text-zinc-300 text-base leading-relaxed mb-4 font-bold tracking-wide">
                     I am <strong class="text-white font-bold">Vaishnav Nitin Gaware</strong>, a professional Motion Designer and Graphic Artist. Winner of state-level filmmaking competition "Gajar".
                 </p>
-                <div class="space-y-3 text-[11px] font-bold lowercase tracking-widest text-zinc-400">
+                <div class="space-y-3 text-[11px] font-bold uppercase tracking-widest text-zinc-400">
                     <p class="flex items-center gap-3"><span class="text-cyan-400">CALL:</span> +91 8432523555</p>
                     <p class="flex items-center gap-3"><span class="text-cyan-400">MAIL:</span> vaishnavgaware3@gmail.com</p>
                 </div>
@@ -106,10 +107,15 @@
     </section>
 
     <section id="showreel" class="py-20 px-6 bg-black">
-        <div class="max-w-5xl mx-auto text-center">
-            <h3 class="text-[11px] font-black tracking-[1em] uppercase mb-12 text-cyan-400 italic">Official Showreel</h3>
-            <div class="glass-card p-2 aspect-video overflow-hidden shadow-2xl" data-aos="zoom-in">
-                <iframe class="w-full h-full rounded-xl" src="PASTE_YOUR_MAIN_SHOWREEL_URL_HERE" title="Showreel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-[11px] font-black tracking-[1em] uppercase mb-12 text-cyan-400 italic">Official Showreels</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-2 aspect-video overflow-hidden shadow-2xl" data-aos="fade-right">
+                    <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/S6kip8Lfpe4" title="Showreel 1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="glass-card p-2 aspect-video overflow-hidden shadow-2xl" data-aos="fade-left">
+                    <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/Ol-ACQrcbQQ" title="Showreel 2" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -145,13 +151,13 @@
     <section id="graphics" class="py-24 px-6 bg-black/40 border-y border-white/5">
         <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
             <h3 class="text-[11px] font-black tracking-[1em] uppercase mb-6 text-cyan-400 italic">Graphics Collection</h3>
-            <div class="glass-card p-12 md:p-20 shadow-2xl relative overflow-hidden">
+            <div class="glass-card p-12 md:p-20 shadow-2xl relative overflow-hidden text-center">
                 <div class="absolute -top-10 -right-10 w-40 h-40 bg-cyan-500/10 blur-[80px]"></div>
                 <h4 class="text-3xl md:text-5xl font-black uppercase italic mb-6">Visual Portfolio</h4>
                 <p class="text-zinc-400 text-xs tracking-widest uppercase mb-12 leading-relaxed opacity-70">
                     Discover my latest branding, layouts, and digital artwork curated in my new collection.
                 </p>
-                <a href="https://collection.cloudinary.com/dvg1ukdtz/c8fb89d2749a9f7a76872dc375bce4d0">
+                <a href="https://collection.cloudinary.com/dvg1ukdtz/c8fb89d2749a9f7a76872dc375bce4d0" target="_blank" class="btn-cyan">
                     Open Cloudinary Gallery
                 </a>
             </div>
@@ -161,11 +167,15 @@
     <section id="portfolio" class="py-20 px-6 bg-zinc-950/20">
         <h2 class="text-center text-[11px] font-black tracking-[1em] uppercase mb-12 text-white italic">Motion Portfolio</h2>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-[1400px] mx-auto">
-            <div class="glass-card p-1 aspect-[9/16] overflow-hidden"><iframe class="w-full h-full rounded-xl" src="PASTE_NEW_URL_1" allowfullscreen></iframe></div>
-            <div class="glass-card p-1 aspect-[9/16] overflow-hidden"><iframe class="w-full h-full rounded-xl" src="PASTE_NEW_URL_2" allowfullscreen></iframe></div>
-            <div class="glass-card p-1 aspect-[9/16] overflow-hidden"><iframe class="w-full h-full rounded-xl" src="PASTE_NEW_URL_3" allowfullscreen></iframe></div>
-            <div class="glass-card p-1 aspect-[9/16] overflow-hidden"><iframe class="w-full h-full rounded-xl" src="PASTE_NEW_URL_4" allowfullscreen></iframe></div>
-            <div class="glass-card p-1 aspect-[9/16] overflow-hidden"><iframe class="w-full h-full rounded-xl" src="PASTE_NEW_URL_5" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/5e9By03NZao" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up" data-aos-delay="50"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/o6dtitjzDs0" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up" data-aos-delay="100"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/o7jZHeKF7xc" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up" data-aos-delay="150"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/KSaO2-4ymo8" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up" data-aos-delay="200"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/rJyvbP8MCVY" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/2mTH75JU2f0" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up" data-aos-delay="50"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/aamrZaohD9A" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up" data-aos-delay="100"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/YgkWw8W2rDI" allowfullscreen></iframe></div>
+            <div class="glass-card p-1 aspect-[9/16] overflow-hidden" data-aos="fade-up" data-aos-delay="150"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/kWVs7HX0yh0" allowfullscreen></iframe></div>
         </div>
     </section>
 
